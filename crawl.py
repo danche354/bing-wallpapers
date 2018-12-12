@@ -3,7 +3,7 @@
 
 import requests
 
-PARSE_URL = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=30'
+PARSE_URL = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=0'
 
 BASE_URL = 'https://www.bing.com'
 
