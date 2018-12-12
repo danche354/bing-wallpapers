@@ -16,5 +16,5 @@ PIC_URL = BASE_URL + PIC_PATH
 
 response = requests.get(PIC_URL)
 
-with open("/Users/pengzonghui/Pictures/bing-wallpapers/%s.jpg"%DATE, 'wb') as f:
+with open("~/Pictures/bing-wallpapers/%s.jpg"%DATE, 'wb') as f:
      f.write(response.content)
