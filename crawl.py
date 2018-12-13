@@ -3,19 +3,20 @@
 
 import requests
 
-PARSE_URL = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'
+PARSE_URL = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8'
 
 BASE_URL = 'https://www.bing.com'
 
-PIC_INFO = requests.get(PARSE_URL).json()['images'][0]
+for i in range(8):
+    PIC_INFO = requests.get(PARSE_URL).json()['images'][i]
 
-DATE = PIC_INFO['startdate']
-PIC_PATH = PIC_INFO['url']
+    DATE = PIC_INFO['startdate']
+    PIC_PATH = PIC_INFO['url']
 
-PIC_URL = BASE_URL + PIC_PATH
+    PIC_URL = BASE_URL + PIC_PATH
 
-print PIC_URL
-response = requests.get(PIC_URL)
+    print PIC_URL
+    response = requests.get(PIC_URL)
 
-with open("~/Pictures/bing-wallpapers/%s.jpg"%DATE, 'wb') as f:
-     f.write(response.content)
+    with open("/Users/pengzonghui/Pictures/bing-wallpapers/%s.jpg"%DATE, 'wb') as f:
+         f.write(response.content)
