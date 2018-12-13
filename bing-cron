@@ -1,1 +1,1 @@
-0 11 * * * ./crawl.py
+0 15 * * * $HOME/Coding/bing-wallpapers/crawl.py >/dev/null 2>&1
