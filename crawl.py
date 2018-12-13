@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/anaconda2/bin/python
 # -*- coding: utf-8 -*-
 
 import requests
@@ -14,6 +14,7 @@ PIC_PATH = PIC_INFO['url']
 
 PIC_URL = BASE_URL + PIC_PATH
 
+print PIC_URL
 response = requests.get(PIC_URL)
 
 with open("~/Pictures/bing-wallpapers/%s.jpg"%DATE, 'wb') as f:
